@@ -44,5 +44,4 @@ public class SessionFactoryConfiguration {
 
         return sqlSessionFactoryBean;
     }
-
 }
