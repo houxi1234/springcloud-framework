@@ -1,8 +1,8 @@
 package cn.ce.st.framework.security.config;
 
-import me.zhengjie.modules.security.security.JwtAuthenticationEntryPoint;
-import me.zhengjie.modules.security.security.JwtAuthorizationTokenFilter;
-import me.zhengjie.modules.security.service.JwtUserDetailsService;
+import cn.ce.st.framework.security.security.JwtAuthenticationEntryPoint;
+import cn.ce.st.framework.security.security.JwtAuthorizationTokenFilter;
+import cn.ce.st.framework.security.service.JwtUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

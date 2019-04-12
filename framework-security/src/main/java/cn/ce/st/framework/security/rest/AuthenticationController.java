@@ -3,6 +3,7 @@ package cn.ce.st.framework.security.rest;
 import cn.ce.st.framework.security.security.AuthenticationInfo;
 import cn.ce.st.framework.security.security.AuthorizationUser;
 import cn.ce.st.framework.security.security.JwtUser;
+import cn.ce.st.framework.security.utils.EncryptUtils;
 import cn.ce.st.framework.security.utils.JwtTokenUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
