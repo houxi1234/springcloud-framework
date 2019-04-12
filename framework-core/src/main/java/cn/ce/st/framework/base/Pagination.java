@@ -5,10 +5,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/** 
+* @Author houxi
+* @Description
+* @Date 9:52 2019/4/12
+* @Param 
+* return 
+**/
 public class Pagination<T> implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
-    public static final int DEFAULT_PAGE_SIZE = 10;
-    public static final int DEFAULT_CURRENTPAGE = 1;
+    private static final int DEFAULT_PAGE_SIZE = 10;
+    private static final int DEFAULT_CURRENTPAGE = 1;
 
     /** 每页默认10条数据*/
     private int pageSize;
@@ -24,7 +31,7 @@ public class Pagination<T> implements java.io.Serializable {
     public static final String DEFAULT_PAGE_SIZE_ATTR = "defaultPageSize";
 
 
-    private Map<String, Object> params = new HashMap<String, Object>();
+    private Map<String, Object> params = new HashMap<>();
 
     public Pagination(int totalCount, int pageSize) {
         this.init(totalCount, pageSize);
@@ -38,8 +45,6 @@ public class Pagination<T> implements java.io.Serializable {
     /**
      * @return
      * @方法功能说明：获取参数列表（不包括分页参数)
-     * @作者 : ce
-     * @创建时间 ：2014年7月14日 下午1:04:04
      */
     public Map<String, Object> getParams() {
         return params;
@@ -49,8 +54,6 @@ public class Pagination<T> implements java.io.Serializable {
      * @param key
      * @param value
      * @方法功能说明：为分页对象传递参数
-     * @作者 : ce
-     * @创建时间 ：2014年7月14日 下午1:03:34
      */
     public void putParamValue(String key, Object value) {
         params.put(key, value);
@@ -60,8 +63,6 @@ public class Pagination<T> implements java.io.Serializable {
      * @param key
      * @return
      * @方法功能说明：获取分页对象的参数
-     * @作者 : ce
-     * @创建时间 ：2014年7月14日 下午1:05:31
      */
     public Object getParamValue(String key) {
         return params.get(key);
@@ -69,8 +70,6 @@ public class Pagination<T> implements java.io.Serializable {
 
     /**
      * @方法功能说明：清空传递的参数
-     * @作者 : ce
-     * @创建时间 ：2014年7月14日 下午1:07:01
      */
     public void clearParam() {
         params.clear();
@@ -80,7 +79,6 @@ public class Pagination<T> implements java.io.Serializable {
     /**
      * 初始化分页参数:需要先设置totalRows
      */
-
     public void init(int totalCount, int pageSize) {
         this.pageSize = pageSize;
         this.totalCount = totalCount;
